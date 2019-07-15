@@ -1,14 +1,32 @@
 @import "~bulma/sass/utilities/initial-variables"
 
-// Config vars
-// Kaldi logo brand color: #FD461E
-$kaldi-red: #D64000
-$kaldi-red-invert: #fff
+$primary-color: #009176
+$primary-color-invert: #fff
 
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
-$body-color: #333
-$black: #2b2523
+$primary: $primary-color
+$primary-invert: $primary-color-invert
+$dark-red: #901b2b
+
+$smaller-screen: 420px
+$small-screen: 576px
+$medium-screen: 768px
+$large-screen: 992px
+$largest-screen: 1200px
+
+body
+  font-size: 1.1rem !important
+  color: #141414 !important
+a
+  color: $primary-color !important
+
+a:visited
+  color: $dark-red
+
+.lora
+  font-size: 1.21rem
+  line-height: 1.65
+  font-family: 'Lora', serif
+  letter-spacing: -.003rem
 
 .navbar .navbar-menu
   box-shadow:none !important
@@ -22,119 +40,59 @@ $black: #2b2523
   display: flex
   flex-wrap: wrap
   justify-content: left
-  align-items: center
   li
     padding: 0 2rem 1rem 0
     margin-bottom: 1.5rem
     margin-top: 0
 
-// Helper Classes
-.full-width-image-container
-  width: 100vw
-  height: 400px
-  position: relative
-  left: 50%
-  right: 50%
-  margin: 2em -50vw
-  background-size: cover
-  background-position: bottom
-  display: flex
-  justify-content: center
-  align-items: center
-
-.full-width-image
-    width: 100vw
-    height: 400px
-    background-size: cover
-    background-position: bottom
-    display: flex
-    justify-content: center
-    align-items: center
-
-.btn
-    display: inline-block
-    padding: 12px 16px 10px
-    font-size: 18px
-    font-size: 1rem
-    line-height: 1.25
-    background-color: #fff
-    border-radius: .25rem
-    text-decoration: none
-    font-weight: 700
-    color: #CC3700
-    text-align: center
-    -webkit-box-shadow: inset 0 0 0 2px #CC3700
-    box-shadow: inset 0 0 0 2px #f40
-    -webkit-transition: all .15s ease
-    transition: all .15s ease
-
 .margin-top-0
   margin-top: 0 !important
 
-.navbar-item .icon
-  color: $primary
-// Override for use of svg's from https://simpleicons.org/
-.icon svg
-  width: 1.5rem
-  height: 1.5rem
-  fill: currentColor
-.navbar-brand .navbar-item.logo
-  padding: 0 1rem
-footer.footer
-  padding: 3rem 0rem 0rem
-  background-color: transparent
+.video-container
+  position: relative
+  width: 100%
+  height: 0
+  padding-bottom: 56.25%
 
-//Menu overrides
-$menu-item-color: $white-ter
-$menu-item-hover-color: $black !important
-$menu-item-hover-background-color: $black
-$menu-item-active-color: $kaldi-red-invert
-$menu-item-active-background-color:	$kaldi-red-invert
-$menu-list-border-left: 1px solid $kaldi-red-invert
-$menu-label-color: $white-ter
+.video-iframe
+  position: absolute !important
+  top: 0 !important
+  left: 0 !important
+  width: 100% !important
+  height: 100%!important
 
+.content .tag, .content .number, 
+  display: inline
+  padding: inherit
+  font-size: inherit
+  line-height: inherit
+  text-align: inherit
+  vertical-align: inherit
+  border-radius: inherit
+  font-weight: inherit
+  white-space: inherit
+  background: inherit
+  margin: inherit
 
-.menu-label
-  font-size: 1em !important
-  text-align: left
-.menu-list
-  list-style: none !important
-  text-align: left
-.social
-  padding: 2em
-.social a
-    padding: .5em .5em .3em .5em
-    border-radius: 1em
-    background-color: $white-ter
-    margin: .5em
-    width: 1em
-    height: 1em
-    vertical-align: middle
-    display: inline
+.content code
+  background-color: inherit
 
-// blog roll
-.blog-list-item.is-featured
-  background-color: #d6400033;
-.blog-list-item header
-  display: flex;
-  margin-bottom: 1em;
-.blog-list-item .featured-thumbnail
-  flex-basis: 35%;
-  margin: 0 1.5em 0 0;
+.content h1, h2, h3, h4
+  color: inherit !important
 
+strong
+  color: inherit !important
+
+.content
+  max-width: 960px !important;
+
+strong
+  color: inherit !important
+
+.section
+  padding: 3rem 1.2r !important
+
+.zeroMargin
+  margin: 0
 
 @import "~bulma"
-
-
-// responsiveness
-+tablet-only
-  .blog-list-item .featured-thumbnail
-    flex-basis: 50%;
-
-+mobile
-  .blog-list-item header
-    display: block
-  .blog-list-item .featured-thumbnail
-    text-align: center;
-    max-width: 70%;
-    margin: 0 0 1em;
