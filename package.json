@@ -1,6 +1,6 @@
 {
-  "name": "aa51cbe33",
-  "description": "Writings from aa51cbe33",
+  "name": "jons-journal",
+  "description": "The blog of Jonathan Sanders",
   "version": "1.9.5",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
